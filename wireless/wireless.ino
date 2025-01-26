@@ -1,7 +1,7 @@
 #include <WiFi.h>
 #include <WebServer.h>
 
-// voltage
+// volt
 #define R_ENA 32
 #define L_ENB 14
 
@@ -23,7 +23,7 @@ const char* password = "";
 WebServer server(80);
 
 void handleRoot() {
-  // HTML หน้าเว็บสำหรับควบคุมมอเตอร์
+  // หน้าเว็บคุมมอเตอร์นะ
   String html = R"rawliteral(
 <!DOCTYPE html>
 <html
@@ -178,7 +178,7 @@ void setup() {
   pinMode(ML_IN3, OUTPUT);
   pinMode(ML_IN4, OUTPUT);
 
-  // ตั้งค่า ESP32 เป็น Access Point
+  // ตั้งค่าเป็น Access Point
   WiFi.softAP(ssid, password);
   Serial.println("Access Point Created!");
   Serial.print("IP Address: ");
@@ -186,13 +186,13 @@ void setup() {
 
   // ตั้งค่าการทำงานของ Web Server
   server.on("/", handleRoot);     // หน้าเว็บหลัก
-  server.on("/forward", forward); // เดินหน้า
-  server.on("/backward", backward); // ถอยหลัง
-  server.on("/left", left); // ถอยหลัง
-  server.on("/right", right); // ถอยหลัง
-  server.on("/stop", stop); // ถอยหลัง
+  server.on("/forward", forward); 
+  server.on("/backward", backward); 
+  server.on("/left", left); 
+  server.on("/right", right); 
+  server.on("/stop", stop); 
 
-  server.begin(); // เริ่มต้น Web Server
+  server.begin(); 
   Serial.println("Web Server Started!");
 }
 
