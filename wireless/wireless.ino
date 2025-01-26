@@ -16,8 +16,8 @@
 int spA = 255;
 int spB = 255;
 
-const char* ssid = "";          // เปลี่ยนเป็นชื่อ Wi-Fi ของคุณ
-const char* password = "12345678";  // เปลี่ยนเป็นรหัสผ่าน Wi-Fi ของคุณ
+const char* ssid = "";          
+const char* password = "";
 
 // สร้างเซิร์ฟเวอร์
 WebServer server(80);
@@ -72,7 +72,6 @@ void handleRoot() {
         margin: auto;
         }
         body{
-        background-image: url(https://m.media-amazon.com/images/I/61RvZIDo-uL.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         -webkit-background-size: 100%;
