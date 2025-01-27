@@ -205,6 +205,7 @@ void setup() {
     Serial.print("IP ADDRESS: ");
     Serial.println(WiFi.softAPIP());  //show ip address in serial:)
 
+    // เอาฟังก์ชั่นที่สร้างมาเข้ามาในเว็บ
     server.on("/", Control_Page);
     server.on("/Red_toggle", Red_toggle);
     server.on("/Orange_toggle", Orange_toggle);
